@@ -1,6 +1,15 @@
 "use strict";
 
 // Basic express setup:
+// myComment: h the sole purpose of determining how the index.html file along
+// with other assets such as the CSS and JS
+// files are served by Express.
+
+//Read and follow the rest of the JS code within 
+//the server directory including the lib and other
+// sub-directories. Start with server/index.js which 
+//is the file that starts up the Express
+// server and brings everything together.
 
 const PORT          = 8080;
 const express       = require("express");

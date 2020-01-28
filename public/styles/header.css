@@ -1,0 +1,15 @@
+header.div {
+    height: 400px;
+    width: 100%;
+    position: relative;
+    background-color: lightcoral;
+
+
+}
+
+h2 {
+    height: 600px;
+    width: 100%;
+    position: relative;
+    background-color: lightcoral;
+}
