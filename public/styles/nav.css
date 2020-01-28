@@ -1,5 +1,5 @@
 nav {
-  background-color:rgb(177, 90, 170);
+  background-color:rgb(176, 177, 90);
   height: 120px;
   color: #FFFF;
   /* font-family:  #FFFF; */
@@ -51,5 +51,6 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+  margin: auto;
+  width: 10%;
 }
