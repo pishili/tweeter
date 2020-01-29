@@ -1,0 +1,32 @@
+.text-new {
+    background-color: rgb(185, 185, 157);
+    float: left;
+    width: 100%;
+    border-width: 0 0 1px;
+    outline:0px none transparent;
+    background-color: transparent;
+    outline: none;
+    padding: 100px;
+}
+
+.container-header {
+    height: 330px;
+    width: 100%;
+    position: relative;
+    padding-top: 20px;
+}
+
+.article_text {
+    background-color: rgb(185, 185, 157);
+    float: left;
+    width: 100%;
+    border-width: 5px;
+    outline:0px none transparent;
+    background-color: transparent;
+    outline: none;
+    padding: 100px;
+    padding-top: 50%;
+    border: 4mm solid rgba(91, 94, 102, 0.6);
+}
+
+

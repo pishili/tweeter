@@ -1,5 +1,10 @@
 const myCalculator = function() {
-    $("#char_counter").text( 140 - $("#tweet_text").val().length );
+    const counter = 140 - $("#tweet_text").val().length;
+    if (counter >= 0) {
+        $("#char_counter").text( 140 - $("#tweet_text").val().length);
+    } else {
+        console.log('print red');
+    }
 }
 
 

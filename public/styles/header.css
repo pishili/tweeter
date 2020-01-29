@@ -1,12 +1,26 @@
-header {
+.app-header {
     height: 330px;
     width: 100%;
     position: relative;
     background-color: rgb(17, 93, 165);
     padding-top: 20px;
     background-image: url('../images/45-degree-fabric-light.png')
-
 }
+
+.submit-button {
+    /* display: inline-block; */
+    padding-top: 20%;
+    background-color: #386bd8;
+    border-radius: 10px;
+    border: 2px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    width: 200px;
+    float: left;
+}
+
 
 h2 {
     height: 50px;
@@ -21,23 +35,4 @@ h2 {
     background-color: rgb(147, 240, 128);
 }
 
-button {
-    /* display: inline-block; */
-    background-color: #386bd8;
-    border-radius: 10px;
-    border: 4px double #cccccc;
-    color: #eeeeee;
-    text-align: center;
-    font-size: 30px;
-    padding: 20px;
-    width: 200px;
-    /* -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s; */
-    cursor: pointer;
-    margin: 2px;
-    font-family:Arial;
-    float: left;
-}
 
