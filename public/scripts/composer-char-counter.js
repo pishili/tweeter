@@ -1,3 +1,9 @@
+const myCalculator = function() {
+    $("#char_counter").text( 140 - $("#tweet_text").val().length );
+}
+
+
 $(document).ready(function() {
-    // --- our code goes here ---
-  });
+    $("#tweet_text").on('keydown', myCalculator);
+});
+

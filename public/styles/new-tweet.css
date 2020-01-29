@@ -1,14 +1,13 @@
 textarea {  
     float: left;
     width: 100%;
-    border-bottom-width: 15px;
+    border-bottom-width: 3px;
     border-right-width: 0px;
     border-left-width: 0px;
     border-top-width: 0px;
     outline:0px none transparent;
     background-color: transparent;
     outline: none;
-    margin-right: 10px;
 }
 
 form > input {
