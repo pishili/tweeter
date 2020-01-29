@@ -1,3 +1,1 @@
-$(document).ready(function() {
-    // --- our code goes here ---
-  });
+document.querySelector("textarea");
