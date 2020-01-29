@@ -1,12 +1,12 @@
 .text-new {
     background-color: rgb(185, 185, 157);
-    float: left;
     width: 100%;
     border-width: 0 0 1px;
     outline:0px none transparent;
     background-color: transparent;
     outline: none;
-    padding: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .container-header {
@@ -24,9 +24,47 @@
     outline:0px none transparent;
     background-color: transparent;
     outline: none;
-    padding: 100px;
-    padding-top: 50%;
+    padding: 30px;
+    margin-top: 50px;
     border: 4mm solid rgba(91, 94, 102, 0.6);
 }
 
+.w1-container {
+    background-color: rgb(15, 15, 14);
+    float: left;
+    width: 100%;
+    border-width: 5px;
+    outline:0px none transparent;
+    background-color: transparent;
+    outline: none;
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 2mm solid rgba(0, 0, 0, 0.6);  
+    border-radius: 10px;
+}
 
+
+#header_image {
+    display: block;
+    margin-left: auto;
+    margin: auto;
+    width: 10%;
+    float: left;
+    margin-right: 1em;
+}
+
+article > header > h4 {
+    display: inline-block;
+    width: 25%;
+    text-align: right;
+
+}
+
+article > header > h2 {
+    display: inline-block;
+    width: 70%;
+    text-align: left;
+    margin-right: 1em;
+    
+}

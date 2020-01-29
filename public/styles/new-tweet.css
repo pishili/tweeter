@@ -1,5 +1,4 @@
 textarea {  
-    float: left;
     width: 100%;
     border-bottom-width: 3px;
     border-right-width: 0px;
@@ -11,11 +10,6 @@ textarea {
 }
 
 form > input {
-    float: left;
-    position: absolute;
-    margin-bottom: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
     display:block;
     width: 100px;   
     text-decoration-color: #ffffff;
@@ -26,6 +20,5 @@ form > input {
 form > span {
     float: right;
     border-radius: 10px;
-    padding:  0px 8px 40px 8px;
     color: black;
 }

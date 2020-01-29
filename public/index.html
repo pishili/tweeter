@@ -48,7 +48,8 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <section class="new-tweet">
+
+    <section>
       <h2>Compose Tweet</h2>
       <form method="POST" action="http://localhost:8080/tweets">
         <textarea class="text-new" id="tweet_text" name="text" placeholder="What are you humming about?"></textarea>
@@ -57,17 +58,25 @@
       </form>
     </section>
 
-    <article class="w1-container">
-      <header class="container-header">
-        <!-- <span class="left-side">My Name</span>
-        <span class="right-side">@email</span> -->
-      </header>
-      <textarea class="article_text" name="text"
-        placeholder="What are you humming about? What do you wanna tweet?"></textarea>
-      <footer class="contaciner1-footer">
-        <input type="text" value="some days ago">
-      </footer>
+    <br><br><br><br><br>
 
+    you are about to tweet here!
+
+    <!-- Adding container after the form section and the name of the class-->
+    <!-- a tweet is an article-->
+    <article class="w1-container">
+      <header class="article-header">
+        <h2>
+        <img id="header_image" src="./images/s.png">
+            Elmer Lazzeri
+        </h2>
+
+          <h4>@ladan</h4>
+      </header>
+      What are you humming about? What do you wanna tweet?
+      <footer class="contaciner1-footer">
+        some days ago
+      </footer>
     </article>
   </main>
 
