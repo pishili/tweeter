@@ -8,6 +8,7 @@ textarea {
     outline:0px none transparent;
     background-color: transparent;
     outline: none;
+    margin-right: 10px;
 }
 
 form > input {
@@ -28,6 +29,7 @@ form > span {
     border-radius: 10px;
     padding:  0px 8px 40px 8px;
     color: black;
+    
 }
 
 
