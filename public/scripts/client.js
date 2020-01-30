@@ -5,25 +5,25 @@
  */
 
 // alert("Welcome to Tweeter Website");
+// jquery -> to popularity
 
+// grab the tweet
+// console.log($list)
+const $list = $('#main-list');
+const input = $('#input').val('Hello World! ')
 
 const createTweetElement = (tweetObj) => {
-
-    // const $tweet = $("<article>").addClass("tweet");
-    // const article = document.getElementsByTagName("article");
-    // console.log(article);
-
-    // const article = ("#tweet").val();
-    // console.log(article);
-
-    // tweetElement
+    // grab the tweets
+    // get the contents of the input field
+    // add the input field to the 
     // 
-    const tweetElement = document.getElementsByClassName("tweet");
-    return tweetElement;
+    const $tweet = document.getElementsByClassName("tweet");
 }
 
 
 const renderTweets = (arrTweetObjects) => {
     // append each tweet object to tweet-container
-    
+    arrTweetObjects.map(item, (item) => {
+        createTweetElement(item);
+    })  
 }

@@ -73,13 +73,6 @@ article.tweet footer {
     justify-content: space-between;
     width: 100%;
     padding-left: 1em;
-    /* text-align: left;
-    margin-right: 1em;
-    position:fixed;
-    width:100%; /* fill the whole width of the screen */
-    /*border-top:1px solid #aaa; /* you can change to whatever color you want */
-    /*padding-top:10px; /* add some spacing between line and links/text */
-    /*background:#fff; */
 }
 
 
@@ -108,14 +101,14 @@ article.tweet footer p.icons {
     flex: 0 1 100px;
 }
 
-article.tweet div.border-set {
+article.tweet div.content {
     border-bottom-width: 20px;
     padding-left: 1em;
     padding-right: 1em;
     border-color: blueviolet;
 }
 
-article.tweet div.border-set p.border-p {
+article.tweet div.content p.border-p {
     border-top-style: none;
     border-right-style: none;
     border-bottom-style: solid;

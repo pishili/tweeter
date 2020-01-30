@@ -10,3 +10,4 @@ const myCalculator = () => {
 $(document).ready(function() {
     $("#tweet_text").on('keydown', myCalculator);
 });
+
