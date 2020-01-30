@@ -22,3 +22,13 @@ form > span {
     border-radius: 10px;
     color: black;
 }
+
+span.emoji_right {
+    margin: auto;
+    float: right;
+}
+
+span.some_days_ago {
+    margin: auto;
+    float: left;
+}
