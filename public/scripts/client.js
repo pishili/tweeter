@@ -8,17 +8,22 @@
 
 
 const createTweetElement = (tweetObj) => {
-    // using jquery to construct new elements using $
-    const $tweet = $("<article>").addClass("tweet");
-    
-    const article = document.getElementsByTagName("article");
-    console.log(article);
 
+    // const $tweet = $("<article>").addClass("tweet");
+    // const article = document.getElementsByTagName("article");
+    // console.log(article);
+
+    // const article = ("#tweet").val();
+    // console.log(article);
+
+    // tweetElement
+    // 
+    const tweetElement = document.getElementsByClassName("tweet");
+    return tweetElement;
 }
 
 
 const renderTweets = (arrTweetObjects) => {
     // append each tweet object to tweet-container
-
-
+    
 }
