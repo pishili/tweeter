@@ -1,3 +1,4 @@
+
 const myCalculator = () => {
     const counter = 140 - $("#tweet_text").val().length;
     if (counter >= 0) {
