@@ -1,67 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
+
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Source+Sans+Pro:300i,400,700i&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Source+Sans+Pro:300i,400,700i&display=swap"
+    rel="stylesheet">
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet_comments.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" type="text/css"/>
+
+  <!-- load jQuery-->
+  <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+</head>
+
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav class="sticky">
+    <span class="left-side">tweeter</span>
+    <span class="right-side">Write a new Tweet</span>
+  </nav>
+
+  <header class="app-header">
+
+    <div>
+      <img class="image_border" src="/images/profile-hex.png">
+    </div>
+
+    <div>
+      <h2>Your Name</h2>
+    </div>
+
+  </header>
+
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+
+    <section>
+      <h2>Compose Tweet</h2>
+      <form method="POST" action="http://localhost:8080/tweets">
+        <textarea class="text-new" id="tweet_text" name="text" placeholder="What are you humming about?"></textarea>
+        <input class="submit-button" type="submit" value="TWEET">
+        <span class="counter" id="char_counter">140</span>
+      </form>
+    </section>
+
+    <br><br><br><br><br>
+
+    <h3>Past Posts</h3>
+
+    <!-- Adding container after the form section and the name of the class-->
+    <!-- a tweet is an article-->
+    <!-- <article class="tweet" id="article-tweet">
+      <header class="tweet-header">
+        <h2>
+        <img id="tweet_image" src="./images/avator_header.png">
+            Elmer Lazzeri
+        </h2>
+
+          <h4>@ladan</h4>    
+      </header>
+
+    <div>
+      <p>akshdka</p>
+    </div>
+
+      <footer>
+        <p class="timestamp">days ago</p>
+        <p class="icons">
+          <i class="fas fa-flag"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-heart"></i>
+        </p>
+      </footer>
+    </article> -->
 
 
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  </main>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  </head>
+  <!-- Write a new Tweet -->
+  <!-- test diff-->
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav class="sticky">
-      <span class="left-side">tweeter</span>
-      <span class="right-side">Write a new Tweet</span>
-    </nav>
+  <script src="./scripts/client.js"></script>
 
-    <header>
 
-      <div >
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Your Name</h2>
-      </div>
-
-    </header>  
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form method="POST" action="http://localhost:8080/tweets">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <br>
-        </br>
-      <input type="submit" value="TWEET">
-          <span class="counter">140</span> 
-        </form>
-      </section>
-    </main>
-
-    <!-- Write a new Tweet -->
-    <!-- test diff-->
-    <script src="./scripts/client.js"></script>
-
-  </body>
-
-  
+</body>
 </html>
-

@@ -15,7 +15,7 @@ html {
  */
 
 body {
-  color: #937e46;
+  color: #424230;
   background-color: rgb(195, 199, 198);
   font-size: 24px;
   font-family: 'Source Sans Pro';
@@ -26,9 +26,9 @@ body {
  */
 
  main {
-   width: 90%;
+   width: 80%;
    height: 100%;
    margin: auto;
-   margin-left: 10%;
-   margin-right: 10%;
+   /* margin-left: 10%;
+   margin-right: 10%; */
  }
