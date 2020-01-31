@@ -87,4 +87,9 @@ const renderTweets = (arrTweetObjects) => {
 }
 
 
+const submitForm = () => {
+
+
+}
+
 console.log(renderTweets(data));
