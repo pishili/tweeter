@@ -4,6 +4,22 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script>
+  $(function() {
+    const $button = $('#tweet-button');
+    const $form = $('#tweet-post-form');
+    $button.on('click', function () {
+      event.preventDefault();
+      console.log('Button clicked, performing ajax call...');
+      $form.on('click', function (event) {
+        event.preventDefault();
+        console.log( $( this ).serialize() ); 
+        $.ajax('/tweets', { method: 'POST', data: $(this).serialize() })
+      });
+    });
+  });
+  </script>
 
 
   <!-- External CSS -->
@@ -53,9 +69,9 @@
 
     <section>
       <h2>Compose Tweet</h2>
-      <form method="POST" action="http://localhost:8080/tweets">
+      <form id="tweet-post-form" method="POST" action="http://localhost:8080/tweets">
         <textarea class="text-new" id="tweet_text" name="text" placeholder="What are you humming about?"></textarea>
-        <input class="submit-button" type="submit" value="TWEET">
+        <input id="tweet-button", class="submit-button" type="submit" value="TWEET">
         <span class="counter" id="char_counter">140</span>
       </form>
     </section>
