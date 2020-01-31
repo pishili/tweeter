@@ -82,7 +82,7 @@ const renderTweets = (arrTweetObjects) => {
         const container = $(".container");
         console.log(container);
         $( ".container" ).append(tweetMarkup);
-        $( ".container" ).append("YOOooooooOOOO");
+        // $( ".container" ).append("YOOooooooOOOO");
     });
 }
 

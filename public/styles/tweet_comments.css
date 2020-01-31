@@ -108,7 +108,7 @@ article.tweet div.content {
     border-color: blueviolet;
 }
 
-article.tweet div.content p.border-p {
+article.tweet div.border-set p.border-p {
     border-top-style: none;
     border-right-style: none;
     border-bottom-style: solid;
