@@ -5,19 +5,8 @@
  */
 
 const createTweetElement = ((tweet) => {
-    // const $username = $('<h2>').text(tweet.user.name);
-    // const $userhandle = $('<h4>').text(tweet.user.handle);
-    // const $tweetContent = $('<p>').text(tweet.content.text);
-    // const $header = $('<p>')
-    //     .text($username);
-    // const $footer = $('<p>')
-    //     .text(tweet.created_at)
-    //     .addClass('footer');
-
-    // const tweetCreatedAt = $('<p>').text(tweet.content.text);
     return `
 
-    
     <article class="tweet" id="article-tweet">
     <header class="tweet-header">
       <h2>
@@ -59,7 +48,7 @@ $(() => {
 
 
 
-
+// using createTweetElement function to create element
 const renderTweets = (tweets) => {
     tweets.forEach(tweet => {
         const tweetMarkup = createTweetElement(tweet);
@@ -73,6 +62,7 @@ const renderTweets = (tweets) => {
 
 
 // fetching tweets from the http://localhost:8080/tweets page
+
 const loadTweets = () => {
 
     $.ajax('http://localhost:8080/tweets', { method: 'GET' })
