@@ -44,36 +44,22 @@ const data = [
 ]
 
 
+const createTweetElement = (tweetObj, moutPoint) => {
+    tweetObj.forEach((tweet) => {
+        const $username = $('<h2>').text(tweet.user.name);
+        const $userhandle = $('<h4>').text(tweet.user.handle);
+        const $tweetContent = $('<p>').text(tweet.content.text);
+        const $header = $('<p>').
+            .text($username);
+        const $footer = $('<p>')
+            .text(tweet.created_at)
+            .addClass('footer');
 
-const createTweetElement = (tweetObj) => {
-    // create element
-    return `
-        <article class="tweet" id="article-tweet">
-        <header class="tweet-header">
-            <h2>
-            <img id="tweet_image" src="./images/avator_header.png">
-                ${tweetObj.user.name}
-            </h2>
-
-            <h4>${tweetObj.user.handle}</h4>    
-        </header>
-
-        <div>
-        <p>${tweetObj.content.text}</p>
-        </div>
-
-        <footer>
-            <p class="timestamp">${tweetObj.created_at}</p>
-            <p class="icons">
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-            </p>
-        </footer>
-        </article>`
+        const tweetCreatedAt = $('<p>').text(tweet.content.text);
+    })
 }
 
-console.log(createTweetElement(tweetData));
+// console.log(createTweetElement(tweetData));
 
 
 // const renderTweets = (arrTweetObjects) => {
@@ -86,6 +72,15 @@ console.log(createTweetElement(tweetData));
 //         // $( ".container" ).append("YOOooooooOOOO");
 //     });
 // }
+
+// promise syntax for Ajax .done and .fail instead of .success and
+// they are returning jQuery Promises. 
+// getJSON();
+// Either passing the callback
+// Post.userID. 
+// $.getJSON('')
+
+console.log(renderTweets(data));
 
 
 // const submitForm = () => {
