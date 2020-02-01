@@ -49,7 +49,7 @@ const createTweetElement = (tweetObj, moutPoint) => {
         const $username = $('<h2>').text(tweet.user.name);
         const $userhandle = $('<h4>').text(tweet.user.handle);
         const $tweetContent = $('<p>').text(tweet.content.text);
-        const $header = $('<p>').
+        const $header = $('<p>')
             .text($username);
         const $footer = $('<p>')
             .text(tweet.created_at)
@@ -80,28 +80,26 @@ const createTweetElement = (tweetObj, moutPoint) => {
 // Post.userID. 
 // $.getJSON('')
 
-console.log(renderTweets(data));
-
 
 // const submitForm = () => {
 
 
 // }
 
-const renderTweets = (data) => {
-    data === Array;
-    data.forEach(() => {
-        // 
-    });
-};
+// const renderTweets = (data) => {
+//     data === Array;
+//     data.forEach(() => {
+//         // 
+//     });
+// };
 
-const loadTweets = function () {
-    const $button = $('#load-more-posts');
-    $.ajax('http://localhost:8080/tweets', { method: 'GET' })
-        .then(function (data) {
-            console.log(data);
-        });
-}
+// const loadTweets = function () {
+//     const $button = $('#load-more-posts');
+//     $.ajax('http://localhost:8080/tweets', { method: 'GET' })
+//         .then(function (data) {
+//             console.log(data);
+//         });
+// }
 
 
     // (() => {
@@ -117,14 +115,17 @@ const loadTweets = function () {
     //     });
     // });
 
-(() => {
+    $(() => {
+    console.log('test');
     const $button = $('#tweet-button');
-    const $form = $('#tweet-post-form');
     $button.on('click', function () {
         event.preventDefault();
+        const form = $('#tweet-post-form');
         console.log('Button clicked, performing ajax call...');
-        console.log($(form).serialize());
-        $.ajax('/tweets', { method: 'POST', data: $(form).serialize() });
+        console.log(form.serialize());
+        $.ajax('/tweets', { method: 'POST', data: form.serialize() });
     });
 })
+
+console.log('akdad');
 
