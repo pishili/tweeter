@@ -4,125 +4,78 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Test / driver code (temporary). Eventually will get this from the server.
-const tweetData = {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-    "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-    "created_at": 1461116232227
- }
+// const createTweetElementWithAutoFun = ((tweet) => {
+//   const htmlFile = '';
+//   $(htmlFile).addClass("<h2>");
+//   this.addClass('h2');
 
- const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
-
-
-const createTweetElement = (tweet, moutPoint) => {
-    // tweetObj.forEach((tweet) => {
-        const $username = $('<h2>').text(tweet.user.name);
-        const $userhandle = $('<h4>').text(tweet.user.handle);
-        const $tweetContent = $('<p>').text(tweet.content.text);
-        const $header = $('<p>')
-            .text($username);
-        const $footer = $('<p>')
-            .text(tweet.created_at)
-            .addClass('footer');
-
-        const tweetCreatedAt = $('<p>').text(tweet.content.text);
-    // })
-}
-
-// console.log(createTweetElement(tweetData));
-function outputTweets(data) {
-  output.innerHTML = '';
-  data.forEach((item, i) => {
-    console.log(item);
-    let hyper = `<a
-            `
-  })
-}
-
-// 
-const renderTweets = (tweets) => { 
-  tweets.forEach((tweet) => {
-    // tweet text
-    const $TweetText = $('');
-
-  })
-
-}
-
-// fetching tweets from the localhost/tweets
-const loadTweets = function() {
-  // fetching tweets 
-  
-  const $button = $('#load-more-posts');
-  // const $button = $('')
-  
-  $.ajax('http://localhost:8080/tweets', { method: 'GET' })
-  .then(function (data) {
-    console.log(data);
-    //next step we need to call render tweets with the the new data
-    renderTweets(data);
-
-  });
-}
-
-// const renderTweets = function(data) {
-//   output.innerHTML = '';
-//   data.forEach((item, i) => {
-//     console.log(item);
-//     let form = document.createElement('form');
-//     let span = document.createElement('span');
-//     const btn = document.createElement('button');
-//     btn.textContent = "press me";
-//     document.body.appendChild(btn);
-//     btn.addEventListener('click', () => {
-//       fetchData("https://sw")
-//     })
-    
-//     // span.innerHTML = `${}`
-//   })
-//   data.forEach(console.log(data));
 // }
+const createTweetElement = ((tweet) => {
+    return `
 
-$(document).ready(() => {
-  loadTweets();
-  const $button = $('#tweet-button');
-  const $form = $('#tweet-post-form');
-  $button.on('click', function () {
-    event.preventDefault();
-    console.log('Button clicked, performing ajax call...');
-    $form.on('click', function (event) {
-      event.preventDefault();
-      console.log( $( this ).serialize() ); 
-      $.ajax('/tweets', { method: 'POST', data: $(this).serialize() })
+    <article class="tweet" id="article-tweet">
+    <header class="tweet-header">
+      <h2>
+      <img id="tweet_image" src="./images/avator_header.png">
+          ${tweet.user.name}
+      </h2>
+
+        <h4>${tweet.user.handle}</h4>    
+    </header>
+
+  <div>
+    <p>${tweet.content.text}</p>
+  </div>
+
+    <footer>
+      <p class="timestamp">${tweet.user.created_at}</p>
+      <p class="icons">
+        <i class="fas fa-flag"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="fas fa-heart"></i>
+      </p>
+    </footer>
+  </article>
+    `;
+});
+
+
+$(() => {
+    console.log('test');
+    const $button = $('#tweet-button');
+    $button.on('click', function () {
+        event.preventDefault();
+        const form = $('#tweet-post-form');
+        console.log('Button clicked, performing ajax call...');
+        console.log(form.serialize());
+        $.ajax('/tweets', { method: 'POST', data: form.serialize() });
     });
-  });
 })
+
+
+
+// using createTweetElement function to create element
+const renderTweets = (tweets) => {
+    tweets.forEach(tweet => {
+        const tweetMarkup = createTweetElement(tweet);
+        const container = $(".container");
+        console.log(container);
+        $(".container").append(tweetMarkup);
+        // $(".container").append("YOOooooooOOOO");
+    });
+}
+
+
+
+// fetching tweets from the http://localhost:8080/tweets page
+const loadTweets = () => {
+
+    $.ajax('http://localhost:8080/tweets', { method: 'GET' })
+        .then((data) => {
+            console.log(data);
+            renderTweets(data);
+        });
+}
+
+
+loadTweets();
