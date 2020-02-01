@@ -3,29 +3,6 @@
 <head>
   <title>Ajax Example</title>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<<<<<<< HEAD
-  <script>
-    $(function() {
-      // the id of load-more-posts inside button
-      const $button = $('#load-more-posts');
-      // using on function on button with callback
-      $button.on('click', function () {
-        console.log('Button clicked, performing ajax call...');
-        // using jQuery to make Ajax Requests
-        // We need to make Ajax Request.
-        // all Ajax requests are made through the XML Http Request
-        // XML Request when not using jQuery
-        // implement with JavaScript but other techs can make HTTP request
-        // jquery abstracting 
-        $.ajax('more-posts.html', { method: 'GET' })
-        .then(function (morePostsHtml) {
-          console.log('Success: ', morePostsHtml);
-          $button.replaceWith(morePostsHtml);
-        });
-      });
-    });
-  </script>
-=======
 <script>
 $(function() {
   const $button = $('#load-more-posts');
@@ -40,7 +17,6 @@ $(function() {
   });
 });
 </script>
->>>>>>> 600b5992b67ed3aecb0eb0b4926d2df267f45dfe
 </head>
 <body>
   <section>

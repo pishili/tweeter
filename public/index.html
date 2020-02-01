@@ -5,21 +5,11 @@
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script>
+  <!-- <script>
   $(function() {
-    const $button = $('#tweet-button');
-    const $form = $('#tweet-post-form');
-    $button.on('click', function () {
-      event.preventDefault();
-      console.log('Button clicked, performing ajax call...');
-      $form.on('click', function (event) {
-        event.preventDefault();
-        console.log( $( this ).serialize() ); 
-        $.ajax('/tweets', { method: 'POST', data: $(this).serialize() })
-      });
-    });
+   
   });
-  </script>
+  </script> -->
 
 
   <!-- External CSS -->
@@ -82,8 +72,29 @@
 
   </main>
 
-  <!-- Write a new Tweet -->
+  <!-- Write a new Tweet --> -->
   <!-- test diff-->
+ <article class="tweet" id="article-tweet">
+      <header class="tweet-header">
+        <h2>
+        <img id="tweet_image" src="./images/avator_header.png">
+            Elmer Lazzeri
+        </h2>
+          <h4>@ladan</h4>    
+      </header>
+    <div>
+      <p>akshdka</p>
+    </div>
+      <footer>
+        <p class="timestamp">days ago</p>
+        <p class="icons">
+          <i class="fas fa-flag"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-heart"></i>
+        </p>
+      </footer>
+    </article>
+
 
   <script src="./scripts/client.js"></script>
 

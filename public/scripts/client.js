@@ -43,90 +43,86 @@ const tweetData = {
   ]
 
 
-const createTweetElement = (tweetObj, moutPoint) => {
-    tweetObj.forEach((tweet) => {
+const createTweetElement = (tweet, moutPoint) => {
+    // tweetObj.forEach((tweet) => {
         const $username = $('<h2>').text(tweet.user.name);
         const $userhandle = $('<h4>').text(tweet.user.handle);
         const $tweetContent = $('<p>').text(tweet.content.text);
-        const $header = $('<p>').
+        const $header = $('<p>')
             .text($username);
         const $footer = $('<p>')
             .text(tweet.created_at)
             .addClass('footer');
 
         const tweetCreatedAt = $('<p>').text(tweet.content.text);
-    })
+    // })
 }
 
 // console.log(createTweetElement(tweetData));
-
-
-const renderTweets = (arrTweetObjects) => {
-
-    arrTweetObjects.forEach(tweetObj => {
-        const tweetMarkup = createTweetElement(tweetObj);
-        const container = $(".container");
-        console.log(container);
-        $( ".container" ).append(tweetMarkup);
-        
-    });
+function outputTweets(data) {
+  output.innerHTML = '';
+  data.forEach((item, i) => {
+    console.log(item);
+    let hyper = `<a
+            `
+  })
 }
 
-// promise syntax for Ajax .done and .fail instead of .success and
-// they are returning jQuery Promises. 
-// getJSON();
-// Either passing the callback
-// Post.userID. 
-// $.getJSON('')
+// 
+const renderTweets = (tweets) => { 
+  tweets.forEach((tweet) => {
+    // tweet text
+    const $TweetText = $('');
 
-console.log(renderTweets(data));
-
-<<<<<<< HEAD
-
-// create AJAX Post request in client js file
-$(() => {
-    const $button = $('#load-more-posts');
-    $button.click(() => {
-        $.ajax('more-posts.html', { method: 'GET '})
-        .then((morePostsHtml) => {
-            console.log('Success: ', morePostsHtml);
-            $button.replaceWith(morePostsHtml);
-        });
-    });
-});
-
-$(() => {
-    const $button = $('#load-more-posts'):
-    $button.click(() => {
-        $.ajax('more-posts.html', { method: 'GET' })
-        .then((morePostsHtml) => {
-            console.log('Success: ', morePostsHtml);
-            $button.replaceWith(morePostsHtml);
-        });
-    });
-});
-=======
-const submitForm = () => {
-
+  })
 
 }
 
-console.log(renderTweets(data));
-
+// fetching tweets from the localhost/tweets
 const loadTweets = function() {
-    // make a request to tweets
-    // recieve the array of tweets as JSON
-    $(function() {
-        const $button = $('#load-more-posts');
-        $button.on('click', function () {
-          console.log('Button clicked, performing ajax call...');
-          $.ajax('more-posts.html', { method: 'GET' })
-          .then(function (morePostsHtml) {
-            console.log('Success: ', morePostsHtml);
-            $button.replaceWith(morePostsHtml);
-          });
-        });
-      });
+  // fetching tweets 
+  
+  const $button = $('#load-more-posts');
+  // const $button = $('')
+  
+  $.ajax('http://localhost:8080/tweets', { method: 'GET' })
+  .then(function (data) {
+    console.log(data);
+    //next step we need to call render tweets with the the new data
+    renderTweets(data);
 
+  });
 }
->>>>>>> 600b5992b67ed3aecb0eb0b4926d2df267f45dfe
+
+// const renderTweets = function(data) {
+//   output.innerHTML = '';
+//   data.forEach((item, i) => {
+//     console.log(item);
+//     let form = document.createElement('form');
+//     let span = document.createElement('span');
+//     const btn = document.createElement('button');
+//     btn.textContent = "press me";
+//     document.body.appendChild(btn);
+//     btn.addEventListener('click', () => {
+//       fetchData("https://sw")
+//     })
+    
+//     // span.innerHTML = `${}`
+//   })
+//   data.forEach(console.log(data));
+// }
+
+$(document).ready(() => {
+  loadTweets();
+  const $button = $('#tweet-button');
+  const $form = $('#tweet-post-form');
+  $button.on('click', function () {
+    event.preventDefault();
+    console.log('Button clicked, performing ajax call...');
+    $form.on('click', function (event) {
+      event.preventDefault();
+      console.log( $( this ).serialize() ); 
+      $.ajax('/tweets', { method: 'POST', data: $(this).serialize() })
+    });
+  });
+})
