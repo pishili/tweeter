@@ -93,27 +93,6 @@ const createTweetElement = (tweetObj, moutPoint) => {
 //     });
 // };
 
-// const loadTweets = function () {
-//     const $button = $('#load-more-posts');
-//     $.ajax('http://localhost:8080/tweets', { method: 'GET' })
-//         .then(function (data) {
-//             console.log(data);
-//         });
-// }
-
-
-    // (() => {
-    //     const $button = $('#load-more-posts');
-    //     $button.on('click', function () {
-    //         event.preventDefault();
-    //         console.log('Button clicked, performing ajax call...');
-    //         $.ajax('more-posts.html', { method: 'GET' })
-    //             .then(function (morePostsHtml) {
-    //                 console.log('Success: ', morePostsHtml);
-    //                 $button.replaceWith(morePostsHtml);
-    //             });
-    //     });
-    // });
 
     $(() => {
     console.log('test');
@@ -127,5 +106,17 @@ const createTweetElement = (tweetObj, moutPoint) => {
     });
 })
 
-console.log('akdad');
+// fetching tweets from the http://localhost:8080/tweets page
+const loadTweets = () => {
+    const $button = $('#load-more-posts');
+    $.ajax('http://localhost:8080/tweets', { method: 'GET' })
+        .then(function (data) {
+            // let dataJSON = JSON.parse(data);
+            console.log(data);
+        });
+}
+
+loadTweets();
+
+
 
