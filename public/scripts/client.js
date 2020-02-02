@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 // manually putting article class
+
 const createTweetElement = ((tweet) => {
 
   return `
@@ -91,15 +92,34 @@ $(() => {
         const $text = $(this).find('#tweet_text')
         console.log($text.val()); 
         if ($text.val() === '') {
-          alert('The text is Empty! Fill it with Comments');
+          // alert('The text is Empty! Fill it with Comments');
+          Swal.fire({
+            title: 'Error!',
+            text: 'The text is Empty! Fill it with Comments',
+            icon: 'error',
+            confirmButtonText: 'Cool'
+          })
           return;
         } 
         if ($text.val().length > 140) {
-          alert('The text Length is more than 140 characters');
+          // alert('The text Length is more than 140 characters');
+          Swal.fire({
+            title: 'Error!',
+            text: 'The text Length is more than 140 characters',
+            icon: 'error',
+            confirmButtonText: 'Cool',
+          
+          })
+        } else {
+          console.log('Button clicked, performing ajax call...');
+          $.ajax('/tweets', { method: 'POST', data: form.serialize() });
+          Swal.fire({
+            title: "Good job!",
+            text: "You clicked the button!",
+            icon: "success",
+            button: "Aww yiss!",
+          })
         }
-        
-        console.log('Button clicked, performing ajax call...');
-        $.ajax('/tweets', { method: 'POST', data: form.serialize() });
     });
 })
 
@@ -126,3 +146,7 @@ const loadTweets = () => {
 
 
 loadTweets();
+
+// $(() => {
+  
+// });
