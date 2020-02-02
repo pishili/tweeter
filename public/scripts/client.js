@@ -56,11 +56,11 @@ $(() => {
         const $text = $(this).find('#tweet_text')
         console.log($text.val()); 
         if ($text.val() === '') {
-          alert('akjdhaksh');
+          alert('The text is Empty! Fill it with Comments');
           return;
         } 
         if ($text.val().length > 140) {
-          alert('anadhaskjd');
+          alert('The text Length is more than 140 characters');
         }
         
         console.log('Button clicked, performing ajax call...');
