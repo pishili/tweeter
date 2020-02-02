@@ -48,28 +48,25 @@ const createTweetElement = ((tweet) => {
 
 
 $(() => {
-    console.log('test');
-    const $button = $('#tweet-button');
-    $button.on('click', function () {
+  // changed the button to be form
+    const $form = $('#tweet-post-form');
+    $form.on('submit', function () {
         event.preventDefault();
         const form = $('#tweet-post-form');
+        const $text = $(this).find('#tweet_text')
+        console.log($text.val()); 
+        if ($text.val() === '') {
+          alert('akjdhaksh');
+          return;
+        } 
+        if ($text.val().length > 140) {
+          alert('anadhaskjd');
+
+        }
         
         console.log('Button clicked, performing ajax call...');
-        const textArea = $(tweet_text);
-        const msgLength = $(char_counter);
-        // checking the tweet length
-        // tweet.content.text
-        console.log(`text area is: ${textArea}`);
-        console.log(`message length is: ${msgLength}`);
-        // adding the validation functionality for the messegen not being 
-        // empty or null
-        if (textArea === '' || textArea === null) {
-          alert('Type: ' + textArea + ' is empty or null');
-        } else if (msgLength > 140) {
-          alert('Message Length: ' + msgLength + ' is exceeded 140 character length');
-        }
 
-
+        // console.log(`form content is: ${form}`);
         // console.log(form.serialize());
         // sending the form data to the sever
         $.ajax('/tweets', { method: 'POST', data: form.serialize() });
@@ -84,11 +81,10 @@ const renderTweets = (tweets) => {
         const tweetMarkup = createTweetElement(tweet);
         const container = $(".container");
         console.log(container);
-        $(".container").append(tweetMarkup);
+        $(".container").prepend(tweetMarkup);
         // $(".container").append("YOOooooooOOOO");
     });
 }
-
 
 
 // fetching tweets from the http://localhost:8080/tweets page
