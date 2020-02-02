@@ -1,5 +1,5 @@
 nav {
-  background-color:rgb(176, 177, 90);
+  background-color:#FFFF;
   height: 120px;
   color: #FFFF;
   /* font-family:  #FFFF; */
@@ -16,7 +16,7 @@ nav {
   font-family: 'Bungee';
   z-index: 1;
   text-transform: uppercase;
-  color: #FFFF;
+  color: rgb(194, 34, 167);
   display: inline-block;
   float: left;
   padding-top: 1.5em;
@@ -24,13 +24,14 @@ nav {
   padding-right: 1.5em;
   padding-bottom: 1.5em;
   z-index: 2;
+  font-size: 35px;
 }
 
 .right-side {
   text-align: right;
   z-index: 1;
   /* float: right;  */
-  color: #FFFF;
+  color: rgb(194, 34, 167);
   display: inline-block;
   float: right;
   padding-top: 1.5em;
@@ -38,6 +39,7 @@ nav {
   padding-right: 1.5em;
   padding-bottom: 1.5em;
   z-index: 2;
+  font-size: 35px;
 }
 
 .sticky {
@@ -52,6 +54,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin: auto;
-  width: 10%;
+  width: 8%;
+
 }
 

@@ -7,7 +7,7 @@
 
 const createTweetElement = ((tweet) => {
 
-  return `
+    return `
 
     <article class="tweet" id="article-tweet">
     <header class="tweet-header">
@@ -33,14 +33,14 @@ const createTweetElement = ((tweet) => {
     </footer>
   </article>
     `;
-});  
+});
 
 // const createTweetElementWithAutoFun = ((tweet) => {
 
 //     var articleElement = $('<article>')
 //                           .attr("id", "article-tweet")
 //                           .addClass("tweet");
-    
+
 //     var headerElement =  $(<header></header>);
 //     headerElement.addClass("tweet-header");
 
@@ -84,44 +84,50 @@ const createTweetElement = ((tweet) => {
 // });
 
 $(() => {
-  // changed the button to be form
+    // changed the button to be form
     const $form = $('#tweet-post-form');
     $form.on('submit', function () {
         event.preventDefault();
         const form = $('#tweet-post-form');
         const $text = $(this).find('#tweet_text')
-        console.log($text.val()); 
+        console.log($text.val());
         if ($text.val() === '') {
-          // alert('The text is Empty! Fill it with Comments');
-          Swal.fire({
-            title: 'Error!',
-            text: 'The text is Empty! Fill it with Comments',
-            icon: 'error',
-            confirmButtonText: 'Cool'
-          })
-          return;
-        } 
+            // alert('The text is Empty! Fill it with Comments');
+            Swal.fire({
+                title: 'Error!',
+                text: 'The text is Empty! Fill it with Comments',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+            })
+            return;
+        }
         if ($text.val().length > 140) {
-          // alert('The text Length is more than 140 characters');
-          Swal.fire({
-            title: 'Error!',
-            text: 'The text Length is more than 140 characters',
-            icon: 'error',
-            confirmButtonText: 'Cool',
-          
-          })
+            // alert('The text Length is more than 140 characters');
+            Swal.fire({
+                title: 'Error!',
+                text: 'The text Length is more than 140 characters',
+                icon: 'error',
+                confirmButtonText: 'Cool',
+
+            })
         } else {
-          console.log('Button clicked, performing ajax call...');
-          $.ajax('/tweets', { method: 'POST', data: form.serialize() });
-          Swal.fire({
-            title: "Good job!",
-            text: "You clicked the button!",
-            icon: "success",
-            button: "Aww yiss!",
-          })
+            console.log('Button clicked, performing ajax call...');
+            $.ajax('/tweets', { method: 'POST', data: form.serialize() })
+                .then(() => new Promise((resolve) => setTimeout(resolve, 1000)))
+                .then(() => {
+                    loadTweets()
+                })
+                .then(() => {
+                    Swal.fire({
+                        title: "Good job!",
+                        ext: "You clicked the button!",
+                        icon: "success",
+                        button: "Aww yiss!",
+                    });
+                });
         }
     });
-})
+});
 
 
 const renderTweets = (tweets) => {
@@ -129,6 +135,7 @@ const renderTweets = (tweets) => {
         const tweetMarkup = createTweetElement(tweet);
         // const tweetMarkup = createTweetElementWithAutoFun(tweet);
         // const articleContainer = $(".articleContainer");
+        console.log("called");
         $(".articleContainer").prepend(tweetMarkup);
     });
 }
@@ -137,7 +144,7 @@ const renderTweets = (tweets) => {
 // fetching tweets from the http://localhost:8080/tweets page
 const loadTweets = () => {
 
-    $.ajax('http://localhost:8080/tweets', { method: 'GET' })
+    return $.ajax('http://localhost:8080/tweets', { method: 'GET' })
         .then((data) => {
             console.log(data);
             renderTweets(data);
@@ -146,7 +153,3 @@ const loadTweets = () => {
 
 
 loadTweets();
-
-// $(() => {
-  
-// });

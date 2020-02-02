@@ -2,7 +2,7 @@
     height: 330px;
     width: 100%;
     position: relative;
-    background-color: rgb(17, 93, 165);
+    background-color: rgb(194, 34, 167);
     padding-top: 20px;
     background-image: url('../images/45-degree-fabric-light.png')
 }
@@ -11,7 +11,7 @@
     /* display: inline-block; */
     float: left;
     padding-top: 20%;
-    background-color: #386bd8;
+    background-color: rgb(194, 34, 167);
     border-radius: 10px;
     border: 2px double #cccccc;
     color: #eeeeee;
@@ -22,13 +22,14 @@
 }
 
 
-h2 {
+h1 {
     height: 50px;
     width: 100%;
     position: relative;
     text-align: center;
     margin: 0em;
-    font-size: 20px;
+    font-size: 40px;
+    color: white;
     /* viewport: */
 }
 
