@@ -35,19 +35,52 @@ const createTweetElement = ((tweet) => {
 });  
 
 // const createTweetElementWithAutoFun = ((tweet) => {
-//   const htmlFile = '';
-//   $(htmlFile).addClass("<h2>");
-//   this.addClass('h2');
-  // let articleElement = $('<article>').addClass('tweet');
-  // articleElement.add('header').add('h2')
-  
 
-  // var headerElements = $('<h1>').addClass('header');
+//     var articleElement = $('<article>')
+//                           .attr("id", "article-tweet")
+//                           .addClass("tweet");
+    
+//     var headerElement =  $(<header></header>);
+//     headerElement.addClass("tweet-header");
 
-  // var element1 = $(<u></u>);
-  // headerElements.add(element1);
+//     var h2Element = $(<h2></h2>);
+//     // append headerElement to articleElement
+//     articleElement.add(headerElement);
 
-// }
+//     var imageElement = $(<img></img>);
+//     imageElement.attr("id", "tweet_image").text(tweet.user.name);
+
+//     h2Element.add(imageElement);
+
+//     var h4Element = $(<h4></h4>);
+//     h4Element.text(tweet.user.handle);
+
+//     headerElement.add(h2Element);
+//     headerElement.add(h4Element);
+
+//     var divElement = $(<div></div>);
+//     divElement.text(tweet.content.text);
+
+//     var footerElement = $(<footer></footer>);
+
+//     var timestampParagraphElement = $(<p></p>);
+//     timestampParagraphElement.addClass("timestamp").text(tweet.user.created_at);
+
+//     var iconsParagraphElement = $(<p></p>);
+//     iconsParagraphElement.addClass("icons");
+
+//     var firstIconElement = $(<i></i>);
+//     firstIconElement.addClass("fas fa-flag");
+//     var secondIconElement = $(<i></i>);
+//     secondIconElement.addClass("fas fa-retweet");
+//     var thirdIconElement = $(<i></i>);
+//     thirdIconElement.addClass("fas fa-heart");
+
+
+//     footerElement.add(timestampParagraphElement);
+//     footerElement.add(iconsParagraphElement);
+
+// });
 
 $(() => {
   // changed the button to be form
@@ -71,12 +104,11 @@ $(() => {
 })
 
 
-
-// using createTweetElement function to create element
 const renderTweets = (tweets) => {
     tweets.forEach(tweet => {
         const tweetMarkup = createTweetElement(tweet);
-        const container = $(".articleContainer");
+        // const tweetMarkup = createTweetElementWithAutoFun(tweet);
+        // const articleContainer = $(".articleContainer");
         $(".articleContainer").prepend(tweetMarkup);
     });
 }
@@ -91,6 +123,3 @@ const loadTweets = () => {
             renderTweets(data);
         });
 }
-
-
-loadTweets();
