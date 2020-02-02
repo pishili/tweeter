@@ -3,20 +3,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
-// const createTweetElementWithAutoFun = ((tweet) => {
-//   const htmlFile = '';
-//   $(htmlFile).addClass("<h2>");
-//   this.addClass('h2');
-
-// }
 // manually putting article class
 const createTweetElement = ((tweet) => {
-
-  // var headerElements = $('<h1>').addClass('header');
-
-  // var element1 = $(<u></u>);
-  // headerElements.add(element1);
 
   return `
 
@@ -44,8 +32,22 @@ const createTweetElement = ((tweet) => {
     </footer>
   </article>
     `;
-});
+});  
 
+// const createTweetElementWithAutoFun = ((tweet) => {
+//   const htmlFile = '';
+//   $(htmlFile).addClass("<h2>");
+//   this.addClass('h2');
+  // let articleElement = $('<article>').addClass('tweet');
+  // articleElement.add('header').add('h2')
+  
+
+  // var headerElements = $('<h1>').addClass('header');
+
+  // var element1 = $(<u></u>);
+  // headerElements.add(element1);
+
+// }
 
 $(() => {
   // changed the button to be form
@@ -64,10 +66,6 @@ $(() => {
         }
         
         console.log('Button clicked, performing ajax call...');
-
-        // console.log(`form content is: ${form}`);
-        // console.log(form.serialize());
-        // sending the form data to the sever
         $.ajax('/tweets', { method: 'POST', data: form.serialize() });
     });
 })
@@ -78,10 +76,8 @@ $(() => {
 const renderTweets = (tweets) => {
     tweets.forEach(tweet => {
         const tweetMarkup = createTweetElement(tweet);
-        const container = $(".container");
-        console.log(container);
-        $(".container").prepend(tweetMarkup);
-        // $(".container").append("YOOooooooOOOO");
+        const container = $(".articleContainer");
+        $(".articleContainer").prepend(tweetMarkup);
     });
 }
 
