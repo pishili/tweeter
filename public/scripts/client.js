@@ -10,8 +10,15 @@
 //   this.addClass('h2');
 
 // }
+// manually putting article class
 const createTweetElement = ((tweet) => {
-    return `
+
+  // var headerElements = $('<h1>').addClass('header');
+
+  // var element1 = $(<u></u>);
+  // headerElements.add(element1);
+
+  return `
 
     <article class="tweet" id="article-tweet">
     <header class="tweet-header">
@@ -46,8 +53,25 @@ $(() => {
     $button.on('click', function () {
         event.preventDefault();
         const form = $('#tweet-post-form');
+        
         console.log('Button clicked, performing ajax call...');
-        console.log(form.serialize());
+        const textArea = $(tweet_text);
+        const msgLength = $(char_counter);
+        // checking the tweet length
+        // tweet.content.text
+        console.log(`text area is: ${textArea}`);
+        console.log(`message length is: ${msgLength}`);
+        // adding the validation functionality for the messegen not being 
+        // empty or null
+        if (textArea === '' || textArea === null) {
+          alert('Type: ' + textArea + ' is empty or null');
+        } else if (msgLength > 140) {
+          alert('Message Length: ' + msgLength + ' is exceeded 140 character length');
+        }
+
+
+        // console.log(form.serialize());
+        // sending the form data to the sever
         $.ajax('/tweets', { method: 'POST', data: form.serialize() });
     });
 })

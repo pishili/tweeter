@@ -6,6 +6,7 @@ const myCalculator = () => {
     } else {
         console.log('print red');
     }
+    
 }
 
 $(document).ready(function() {
