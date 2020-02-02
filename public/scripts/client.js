@@ -20,7 +20,7 @@ const createTweetElement = ((tweet) => {
     </header>
 
   <div>
-    <p>${tweet.content.text}</p>
+    <p>${escape(tweet.content.text)}</p>
   </div>
 
     <footer>
