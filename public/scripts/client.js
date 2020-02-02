@@ -123,3 +123,6 @@ const loadTweets = () => {
             renderTweets(data);
         });
 }
+
+
+loadTweets();
