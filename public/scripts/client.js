@@ -61,7 +61,6 @@ $(() => {
         } 
         if ($text.val().length > 140) {
           alert('anadhaskjd');
-
         }
         
         console.log('Button clicked, performing ajax call...');
