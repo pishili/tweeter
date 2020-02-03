@@ -6,17 +6,7 @@
     padding-top: 20px;
     background-image: url('../images/45-degree-fabric-light.png');
 }
-/* @media (max-width:1200px){
-    .column{
-        width: 100%;
-    }
-}
-@media (min-width:1200px) and (max-width:1289px){
-    .app-header {
-        background-image: url('../images/45-degree-fabric-light.png');
-    } */
 
-/* } */
 .submit-button {
     /* display: inline-block; */
     float: left;
@@ -31,7 +21,6 @@
     width: 200px;
 }
 
-
 h1 {
     height: 50px;
     width: 100%;
@@ -45,4 +34,23 @@ h1 {
 
 .background-image {
     background-color: rgb(147, 240, 128);
+}
+
+@media (max-width:500px){
+    .column{
+        width: 100%;
+    }
+}
+
+@media (max-width:1024px){
+    .column{
+        width: 25%;
+        height: 50%;
+    }
+}
+
+@media (min-width:1200px) and (max-width:1289px){
+    .app-header {
+        background-image: url('../images/45-degree-fabric-light.png');
+    } */
 }

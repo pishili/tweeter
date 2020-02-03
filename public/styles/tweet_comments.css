@@ -48,8 +48,11 @@ article.tweet header {
     align-items: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+    /* 768*/
     .tweet-header {
+      /* width: 66%; */
+      width: 33%;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
@@ -60,11 +63,11 @@ article.tweet header img {
     display: inline-block;
     margin-left: auto;
     margin: auto;
-    width: 10%;
+    /* width: 10%; */
+    /* width: 33%; */
     /* float: left; */
     margin-right: 1em;
     margin-left: 1em;
-    margin-top: 1em;
 }
 
 article > header > h4 {
@@ -89,7 +92,7 @@ article > header.tweet-header > h2 {
 article.tweet footer {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 33%;
     padding-left: 1em;
     align-items: center;
 }

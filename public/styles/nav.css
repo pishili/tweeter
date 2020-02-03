@@ -108,7 +108,7 @@ img {
 
 @media (min-width: 1024px) {
   body.image_border {
-    width: 30;
+    width: 66%;
     margin-left: 5%;
     float: left;
   }
@@ -122,6 +122,5 @@ img {
   header.app-header {
     width: 20%;
     height: 80%;
-
   }
 }
