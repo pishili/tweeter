@@ -29,16 +29,32 @@
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.7.1/dist/sweetalert2.min.css" type="text/css" />
+  <script type="text/javascript" src="/scripts/jump-toggle.js"></script>
 </head>
 
 <body>
   <!-- Top nav bar (fixed) -->
   <nav class="sticky">
     <span class="left-side">tweeter</span>
-    <span class="right-side">Write a new Tweet</span>
+    <span class="right-side"><strong></strong> Compose Tweet
+      <!-- <div id="flip">Click to slide</div>
+      <div id="panel">Hello world!</div> -->
+      <svg id="pullicon"
+           width="24"
+           height="24" 
+           viewBox="0 0 24 24" 
+           fill="none" 
+           stroke="currentColor" 
+           stroke-width="2" 
+           stroke-linecap="round" 
+           stroke-linejoin="round" 
+           class="feather feather-chevrons-down">
+           <polyline points="7 13 12 18 17 13"></polyline>
+           <polyline points="7 6 12 11 17 6"></polyline>
+          </svg>
+    </span>
   </nav>
 
   <header class="app-header">
@@ -69,8 +85,15 @@
         </form>
       </section>
 
-    </div>
-
+      <!-- Jump button appears when user scrolls down to allow quick return to top -->
+      <div class="jump-toggle-container">
+        <div class="jump-toggle" hidden>
+          <a href="#top" class="jump-toggle-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+          </a>
+        </div>
+      </div>
+      
     <div class="articleContainer">
       <!-- Write a new Tweet -->
       <!-- test diff-->
@@ -100,8 +123,8 @@
 
 
 
-
   <script src="./scripts/client.js"></script>
+  <script src="./scripts/toggle_button.js"></script>
 
   
 </body>

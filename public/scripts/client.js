@@ -3,7 +3,36 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// manually putting article class
+//added
+$(() => {
+
+    //controls the animation to show or hide the tweet form
+    const toggleTweetForm = function () {
+
+        const $tweetForm = $("#tweet-post-form");
+
+        if ($tweetForm.is(":hidden")) {
+            $tweetForm.slideDown();
+            $("#text-new").focus();
+
+        } else {
+            $tweetForm.slideUp();
+        }
+    };
+
+    //modifies pulldown icon to allow user to toggle form
+    $("#pullicon").click(function () {
+        toggleTweetForm();
+    });
+
+    //modifies jump button to allow user to click and return to top with form toggled
+    $(".jump-toggle").click(function () {
+        const $tweetForm = $("#tweet-post-form");
+        if (!$tweetForm.is(":visible")) toggleTweetForm();
+        $("window").scrollTop(0);
+    });
+});
+
 
 const createTweetElement = ((tweet) => {
 
@@ -150,6 +179,21 @@ const loadTweets = () => {
             renderTweets(data);
         });
 }
+
+$(() => {
+    var x = document.getElementsByClassName("slider");
+    if (x.style.display === "done") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+})
+
+// $(document).ready(() => {
+//     $("#flip").click(()=> {
+//       $("#panel").slideToggle("slow");
+//     });
+//   });
 
 
 loadTweets();
