@@ -4,33 +4,29 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 //added
+
+
+//controls the animation to show or hide the tweet form
+const toggleTweetForm = function () {
+
+    const $tweetForm = $("#tweet-post-form");
+    const arrowIcon = $("#arrowicon");
+
+    if ($tweetForm.is(":hidden")) {
+        $tweetForm.slideDown();
+        arrowIcon.text("⇧");
+    } else {
+        $tweetForm.slideUp();
+        arrowIcon.text("⇩");
+    }
+};
+
+
 $(() => {
 
-    //controls the animation to show or hide the tweet form
-    const toggleTweetForm = function () {
-
-        const $tweetForm = $("#tweet-post-form");
-
-        if ($tweetForm.is(":hidden")) {
-            $tweetForm.slideDown();
-            $("#text-new").focus();
-
-        } else {
-            $tweetForm.slideUp();
-        }
-    };
-
     //modifies pulldown icon to allow user to toggle form
-    $("#pullicon").click(function () {
-        toggleTweetForm();
-    });
+    $("#arrowicon").click(toggleTweetForm);
 
-    //modifies jump button to allow user to click and return to top with form toggled
-    $(".jump-toggle").click(function () {
-        const $tweetForm = $("#tweet-post-form");
-        if (!$tweetForm.is(":visible")) toggleTweetForm();
-        $("window").scrollTop(0);
-    });
 });
 
 
@@ -113,7 +109,6 @@ const createTweetElement = ((tweet) => {
 // });
 
 $(() => {
-    // changed the button to be form
     const $form = $('#tweet-post-form');
     $form.on('submit', function () {
         event.preventDefault();
@@ -121,7 +116,6 @@ $(() => {
         const $text = $(this).find('#tweet_text')
         console.log($text.val());
         if ($text.val() === '') {
-            // alert('The text is Empty! Fill it with Comments');
             Swal.fire({
                 title: 'Error!',
                 text: 'The text is Empty! Fill it with Comments',
@@ -131,7 +125,6 @@ $(() => {
             return;
         }
         if ($text.val().length > 140) {
-            // alert('The text Length is more than 140 characters');
             Swal.fire({
                 title: 'Error!',
                 text: 'The text Length is more than 140 characters',
@@ -162,8 +155,6 @@ $(() => {
 const renderTweets = (tweets) => {
     tweets.forEach(tweet => {
         const tweetMarkup = createTweetElement(tweet);
-        // const tweetMarkup = createTweetElementWithAutoFun(tweet);
-        // const articleContainer = $(".articleContainer");
         console.log("called");
         $(".articleContainer").prepend(tweetMarkup);
     });
@@ -188,12 +179,5 @@ $(() => {
         x.style.display = "none";
     }
 })
-
-// $(document).ready(() => {
-//     $("#flip").click(()=> {
-//       $("#panel").slideToggle("slow");
-//     });
-//   });
-
 
 loadTweets();
