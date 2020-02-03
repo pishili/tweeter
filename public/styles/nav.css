@@ -55,7 +55,6 @@ img {
   margin-right: auto;
   margin: auto;
   width: 8%;
-
 }
 
 .slider {
@@ -70,45 +69,106 @@ img {
   transition: .4s;
 }
 
-/* #panel, #flip {
-  padding: 5px;
-  text-align: center;
-  background-color: #b2ec11;
-  border: solid 1px #c3c3c3;
-}
-#panel {
-  padding: 5px;
-  display: none;
-} */
-
 #arrowicon {
   color: rgb(194, 34, 167);
   position: relative;
+  width: 30px;
+  height: 30px;
 }
 
-#pullicon:hover {
-  animation-duration: 1.5s;
+#arrowicon:hover {
+  animation-duration: 1.2s;
   animation-name: pulldown;
   animation-iteration-count: infinite;
 }
 
-@keyframes pulldown {
-  from {
-    color: rgb(194, 34, 167);
-    top: 0px;
+
+/* Media Queries */
+
+@media screen and (max-width: 2221px) {
+
+  h1 { font-size: 2.4em ;}
+
+  /* Header */
+  .app-header div.hero { left: 56; }
+  header div.hero h1 { margin-bottom: 20px; }
+
+  /* Section - Atmosphere */
+  section.atmosphere article { padding-left: 400px; background-size: 375px auto;}
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 2319px) {
+
+  .image_border { font-size: 2.4em ;}
+
+  /* Header */
+  .image_border div.hero { left: 56; }
+  .image_border div.hero h1 { margin-bottom: 20px; }
+
+  /* Section - Atmosphere */
+  section.atmosphere article { padding-left: 400px; background-size: 375px auto;}
+}
+
+@media (min-width: 450px) {
+  body.app-header {
+    padding-top: 60px;
   }
-  66% {
-    color: #FFFFFF;
-    top: 5px;
+
+  main {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
   }
-  to {
-    color: darkblue;
-    top: 0px;
+
+  .tweet {
+    width: 100%;
+  }
+
+  #new-tt-form-container {
+    padding: 5% 0%;
+  }
+
+  nav {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .tweet .tweet-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand-logo {
+    font-size: 1.8rem;
   }
 }
 
 @media (min-width: 1024px) {
+  body.image_border {
+    width: 30;
+    margin-left: 5%;
+    float: left;
+  }
+
+  main {
+    width: 55%;
+    margin-right: 5%;
+    margin-top: 160px;
+  }
+
   nav {
-    background-color: #fff;
+    width: 100%;
+    padding: 0% 5%;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 2;
+    background-color: rgb(241, 243, 248);
   }
 }

@@ -43,6 +43,18 @@
     border-radius: 10px;
 }
 
+article.tweet header {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .tweet-header {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
 
 article.tweet header img {
     display: inline-block;
@@ -61,6 +73,12 @@ article > header > h4 {
     text-align: right;
 }
 
+@media (min-width: 768px) {
+    article {
+      width: 90%;
+    }
+  }
+
 article > header.tweet-header > h2 {
     display: inline-block;
     width: 70%;
@@ -73,6 +91,7 @@ article.tweet footer {
     justify-content: space-between;
     width: 100%;
     padding-left: 1em;
+    align-items: center;
 }
 
 
@@ -119,3 +138,4 @@ article.tweet div.border-set p.border-p {
 .sweet-alert { 
     width:  850px;   
 }
+
