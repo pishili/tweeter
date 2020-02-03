@@ -30,7 +30,6 @@ nav {
 .right-side {
   text-align: right;
   z-index: 1;
-  /* float: right;  */
   color: rgb(194, 34, 167);
   display: inline-block;
   float: right;
@@ -53,8 +52,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin: auto;
-  width: 8%;
+  width: 200px;
 }
 
 .slider {
@@ -85,7 +83,7 @@ img {
 
 /* Media Queries */
 
-@media screen and (max-width: 2221px) {
+@media screen and (max-width: 99999px) {
 
   h1 { font-size: 2.4em ;}
 
@@ -160,6 +158,12 @@ img {
     width: 55%;
     margin-right: 5%;
     margin-top: 160px;
+  }
+
+  header.app-header {
+    width: 20%;
+    height: 80%;
+
   }
 
   nav {
