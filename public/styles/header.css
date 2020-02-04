@@ -30,7 +30,6 @@ h1 {
       /* width: 100%; */
       width: 100%;
       background-color: rgb(194, 34, 167);
-      
     }
 }
   
@@ -39,7 +38,9 @@ h1 {
 @media only screen and (min-width: 960px) {
     .app-header {
         /* width: 100%; */
-        width: 50%;
+        width: 40%;
         background-color: rgb(169, 172, 2);
+        float: left;
+        margin-top: 70px;
     }
 }

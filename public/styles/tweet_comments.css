@@ -40,7 +40,7 @@
     outline: none;
     padding: 1px 5px 0 1px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     border: 2mm solid rgba(0, 0, 0, 0.6);  
     border-radius: 10px;
 }
@@ -147,7 +147,7 @@ article.tweet div.border-set p.border-p {
 .submit-button {
     /* display: inline-block; */
     float: left;
-    padding-top: 20%;
+    /* padding-top: 20%; */
     background-color: rgb(194, 34, 167);
     border-radius: 10px;
     border: 2px double #cccccc;
