@@ -1,24 +1,11 @@
 .app-header {
     height: 330px;
     position: relative;
-    background-color: rgb(194, 34, 167);
+    /* background-color: rgb(194, 34, 167); */
     padding-top: 20px;
     background-image: url('../images/45-degree-fabric-light.png');
 }
 
-.submit-button {
-    /* display: inline-block; */
-    float: left;
-    padding-top: 20%;
-    background-color: rgb(194, 34, 167);
-    border-radius: 10px;
-    border: 2px double #cccccc;
-    color: #eeeeee;
-    text-align: center;
-    font-size: 30px;
-    padding: 10px;
-    width: 200px;
-}
 
 h1 {
     height: 50px;
@@ -42,6 +29,8 @@ h1 {
     .app-header {
       /* width: 100%; */
       width: 100%;
+      background-color: rgb(194, 34, 167);
+      
     }
 }
   
@@ -51,5 +40,6 @@ h1 {
     .app-header {
         /* width: 100%; */
         width: 50%;
+        background-color: rgb(169, 172, 2);
     }
 }
