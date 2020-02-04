@@ -15,6 +15,8 @@
     padding-top: 5px;
 }
 
+/* the width should be 66% and the header 34%*/
+
 .article_text {
     background-color: rgb(185, 185, 157);
     float: left;
@@ -48,7 +50,7 @@ article.tweet header {
     align-items: center;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
     /* 768*/
     .tweet-header {
       /* width: 66%; */
@@ -57,7 +59,7 @@ article.tweet header {
       align-items: center;
       justify-content: space-between;
     }
-  }
+  /* } */ */
 
 article.tweet header img {
     display: inline-block;
@@ -76,11 +78,11 @@ article > header > h4 {
     text-align: right;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     article {
       width: 90%;
     }
-  }
+  } */
 
 article > header.tweet-header > h2 {
     display: inline-block;
@@ -140,5 +142,19 @@ article.tweet div.border-set p.border-p {
 
 .sweet-alert { 
     width:  850px;   
+}
+
+
+
+/*max-width: 1024px, apply features for 1024 and less */
+/* 600 and less apply these changes*/
+
+@media only screen and (max-width: 500px) {
+    /* If IS  */
+    .article.tweet {
+        background-color: rgb(194, 34, 167);
+        background-image: url('../images/45-degree-fabric-light.png');
+        width: 40%;
+    }
 }
 

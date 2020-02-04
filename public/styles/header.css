@@ -1,6 +1,5 @@
 .app-header {
     height: 330px;
-    width: 100%;
     position: relative;
     background-color: rgb(194, 34, 167);
     padding-top: 20px;
@@ -36,21 +35,21 @@ h1 {
     background-color: rgb(147, 240, 128);
 }
 
-@media (max-width:500px){
-    .column{
-        width: 100%;
-    }
-}
 
-@media (max-width:1024px){
-    .column{
-        width: 25%;
-        height: 50%;
-    }
-}
-
-@media (min-width:1200px) and (max-width:1289px){
+  
+/* Mobile */
+@media only screen and (max-width: 960px) {
     .app-header {
-        background-image: url('../images/45-degree-fabric-light.png');
-    } */
+      /* width: 100%; */
+      width: 100%;
+    }
+}
+  
+  
+/* Desktop */
+@media only screen and (min-width: 960px) {
+    .app-header {
+        /* width: 100%; */
+        width: 50%;
+    }
 }

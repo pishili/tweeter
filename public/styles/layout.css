@@ -23,9 +23,25 @@ body {
  */
 
  main {
-   width: 80%;
    height: 100%;
    margin: auto;
-   /* margin-left: 10%;
-   margin-right: 10%; */
  }
+
+
+/* Mobile */
+@media only screen and (max-width: 960px) {
+  main {
+    /* width: 80%; */
+    width: 100%;
+  }
+}
+
+
+/* Desktop */
+@media only screen and (min-width: 960px) {
+  main {
+    /* width: 80%; */
+    width: 50%;
+  }
+}
+
