@@ -64,7 +64,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #fff;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -78,7 +78,6 @@ img {
 
 #arrowicon:hover {
   animation-duration: 1.2s;
-  animation-name: pulldown;
   animation-iteration-count: infinite;
 }
 
@@ -169,6 +168,6 @@ img {
     right: 0;
     position: fixed;
     z-index: 2;
-    background-color: rgb(241, 243, 248);
+    background-color: #fff;
   }
 }
