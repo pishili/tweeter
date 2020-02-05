@@ -11,3 +11,4 @@ Tweeter is a fun app that let users post their tweets and checks other people's 
 
 The short video is provided to show the tweeter features. Note that the number of characters should not exceed 140 and the system will alert the user in the case of empty tweet or exceeding maximum character limit.
 ![Desktop View](/img/desktopView.png)
+![Mobile View](/img/mobileView.png)
