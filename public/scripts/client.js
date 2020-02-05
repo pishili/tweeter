@@ -42,7 +42,7 @@ const createTweetElement = ((tweet) => {
     <br></br>
 
   <div>
-    <p>${tweet.content.text}</p>
+    <p> ${ $("<div>").text(tweet.content.text).html() } </p>
   </div>
 
     <footer>
