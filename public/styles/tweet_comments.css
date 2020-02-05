@@ -1,19 +1,41 @@
-.text-new {
-    background-color: rgb(185, 185, 157);
-    width: 100%;
-    border-width: 0 0 1px;
-    outline:0px none transparent;
-    background-color: transparent;
-    outline: none;
-    padding-left: 50px;
-    padding-right: 50px;
+.tweet { 
+    /* look */
+    border: 5px solid rgba(0, 0, 0, 0.6);  
+    border-radius: 10px;
+    /* layout */
+    padding: 10px;
+    margin-top: 50px;
+    /* margin-bottom: 50px; */
 }
+
+.tweet .tweet-avator{
+    display: inline-block;
+    margin-left: auto;
+    margin: auto;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+.tweet .tweet-user-name {
+    padding: 1px 1px 0 1px;
+    margin-top: 10px;
+    float: left;
+    font-size: 20px;
+}
+
+
+.tweet .tweet-handle {
+    float: right;
+}
+
 
 .tweet-header {
     width: 100%;
     position: relative;
     padding-top: 5px;
 }
+
+/* the width should be 66% and the header 34%*/
 
 .article_text {
     background-color: rgb(185, 185, 157);
@@ -28,57 +50,6 @@
     border: 4mm solid rgba(91, 94, 102, 0.6);
 }
 
-.tweet {
-    background-color: rgb(15, 15, 14);
-    float: left;
-    width: 100%;
-    border-width: 5px;
-    outline:0px none transparent;
-    background-color: transparent;
-    outline: none;
-    padding: 1px 5px 0 1px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border: 2mm solid rgba(0, 0, 0, 0.6);  
-    border-radius: 10px;
-}
-
-article.tweet header {
-    display: flex;
-    align-items: center;
-}
-
-@media (min-width: 768px) {
-    .tweet-header {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-  }
-
-article.tweet header img {
-    display: inline-block;
-    margin-left: auto;
-    margin: auto;
-    width: 10%;
-    /* float: left; */
-    margin-right: 1em;
-    margin-left: 1em;
-    margin-top: 1em;
-}
-
-article > header > h4 {
-    display: inline-block;
-    width: 25%;
-    text-align: right;
-}
-
-@media (min-width: 768px) {
-    article {
-      width: 90%;
-    }
-  }
-
 article > header.tweet-header > h2 {
     display: inline-block;
     width: 70%;
@@ -87,11 +58,10 @@ article > header.tweet-header > h2 {
 }
 
 article.tweet footer {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-left: 1em;
+    justify-content: space-between;s
     align-items: center;
+    overflow: auto;
+    border-top: 2px solid black;
 }
 
 
@@ -100,24 +70,10 @@ article.tweet p {
 }
 
 article.tweet footer p.icons {
-    padding-right: 5px;
-    margin-left: 50px;
-    padding-right: 1em;
-}
-
-.flex-container {
-    display: fix;
-    background: lightsteelblue;
-    margin-bottom: 10px;
-    width: 500px;
-    display: flex;
-}
-
-.flex-item {
-    box-sizing: border-box;
-    border: 1px solid midnightblue;
-    padding: 10px;
-    flex: 0 1 100px;
+    /* padding-right: 5px; */
+    /* margin-left: 50px; */
+    /* padding-right: 1em; */
+    float: right;
 }
 
 article.tweet div.content {
@@ -139,3 +95,40 @@ article.tweet div.border-set p.border-p {
     width:  850px;   
 }
 
+.submit-button {
+    float: left;
+    background-color: rgb(194, 34, 167);
+    border-radius: 10px;
+    border: 2px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    width: 200px;
+}
+
+footer .timestamp {
+    float: left;
+}
+
+footer .icons {
+    float: right;
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 960px) {
+    .submit-button {
+        background-color: rgb(194, 34, 167);
+    }
+  }
+  
+  
+  /* Desktop */
+  @media only screen and (min-width: 960px) {
+    .submit-button {
+        background-color: rgb(169, 172, 2);
+    }
+  }
+  
+  

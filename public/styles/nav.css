@@ -2,10 +2,7 @@ nav {
   background-color:#FFFF;
   height: 120px;
   color: #FFFF;
-  /* font-family:  #FFFF; */
-  /* text-align: center; */
   top: -50px; /* Hide the navbar 50 px outside of the top view */
-  width: 100%; /* Full width */
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
   z-index: 3;
   text-align: center;
@@ -14,14 +11,13 @@ nav {
 .left-side {
   text-align: left;
   font-family: 'Bungee';
-  z-index: 1;
   text-transform: uppercase;
   color: rgb(194, 34, 167);
   display: inline-block;
   float: left;
   padding-top: 1.5em;
   padding-left: 1.5em;
-  padding-right: 1.5em;
+  /* padding-right: 1.5em; */
   padding-bottom: 1.5em;
   z-index: 2;
   font-size: 35px;
@@ -29,13 +25,11 @@ nav {
 
 .right-side {
   text-align: right;
-  z-index: 1;
-  /* float: right;  */
   color: rgb(194, 34, 167);
   display: inline-block;
   float: right;
   padding-top: 1.5em;
-  padding-left: 1.5em;
+  /* padding-left: 1.5em; */
   padding-right: 1.5em;
   padding-bottom: 1.5em;
   z-index: 2;
@@ -45,16 +39,15 @@ nav {
 .sticky {
   position: fixed;
   top: 0;
-  /* width: 120%; */
   font-weight: 100;
+  width: 100%;
 }
 
 img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin: auto;
-  width: 8%;
+  float: left;
 }
 
 .slider {
@@ -72,8 +65,8 @@ img {
 #arrowicon {
   color: rgb(194, 34, 167);
   position: relative;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  /* height: 30px; */
 }
 
 #arrowicon:hover {
@@ -81,93 +74,60 @@ img {
   animation-iteration-count: infinite;
 }
 
-
-/* Media Queries */
-
-@media screen and (max-width: 2221px) {
-
-  h1 { font-size: 2.4em ;}
-
-  /* Header */
-  .app-header div.hero { left: 56; }
-  header div.hero h1 { margin-bottom: 20px; }
-
-  /* Section - Atmosphere */
-  section.atmosphere article { padding-left: 400px; background-size: 375px auto;}
-}
-
-/* Media Queries */
-
-@media screen and (max-width: 2319px) {
-
-  .image_border { font-size: 2.4em ;}
-
-  /* Header */
-  .image_border div.hero { left: 56; }
-  .image_border div.hero h1 { margin-bottom: 20px; }
-
-  /* Section - Atmosphere */
-  section.atmosphere article { padding-left: 400px; background-size: 375px auto;}
-}
-
-@media (min-width: 450px) {
-  body.app-header {
-    padding-top: 60px;
-  }
-
-  main {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .tweet {
+/* Mobile */
+@media only screen and (max-width: 960px) {
+ 
+  .sticky {
+    width: 100%;
+    color: #fff;
+    background-color: rgb(194, 34, 167);
+    color: #FFFF;
+    background-image: url('../images/45-degree-fabric-light.png');
     width: 100%;
   }
 
-  #new-tt-form-container {
-    padding: 5% 0%;
+  .right-side {
+    /* width: 34%; */
+    color: #fff;
+    width: 34%;
   }
 
-  nav {
-    width: 90%;
-    left: 5%;
-    right: 5%;
+  .left-side {
+    color: white;
+    width: 34%;
   }
+
+
 }
 
-@media (min-width: 768px) {
-  .tweet .tweet-header {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
 
-  .brand-logo {
-    font-size: 1.8rem;
-  }
-}
+/* Desktop */
+@media only screen and (min-width: 960px) {
 
-@media (min-width: 1024px) {
-  body.image_border {
-    width: 30;
-    margin-left: 5%;
-    float: left;
-  }
-
-  main {
-    width: 55%;
-    margin-right: 5%;
-    margin-top: 160px;
-  }
-
-  nav {
+  .sticky {
     width: 100%;
-    padding: 0% 5%;
-    left: 0;
-    right: 0;
-    position: fixed;
-    z-index: 2;
-    background-color: #fff;
+    color: #fff;
+    background-color: rgb(50, 60, 144);
+    color: #FFFF;
+    background-image: url('../images/45-degree-fabric-light.png');
+    width: 100%;
   }
+
+  .right-side {
+    /* width: 34%; */
+    color: #fff;
+    width: 34%;
+  }
+
+  .left-side {
+    color: white;
+    width: 34%;
+  }
+
+  #arrowicon {
+    width: 34%;
+    /* height: 50%; */
+    color: #fff;
+  }
+
 }

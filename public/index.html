@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -9,8 +10,8 @@
 
   <!-- External CSS -->
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Source+Sans+Pro:300i,400,700i&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Inline|Source+Sans+Pro:300i,400,700i&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" type="text/css" />
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -19,11 +20,8 @@
   <link rel="stylesheet" href="/styles/tweet_comments.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-    type="text/css" />
 
   <!-- load jQuery-->
-  <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
   <!-- External JS -->
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -31,8 +29,8 @@
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.7.1/dist/sweetalert2.min.css" type="text/css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script type="text/javascript" src="/scripts/jump-toggle.js"></script>
-  <link rel="stylesheet" href="/styles/small.css" media="(max-width:1200px)" />
 </head>
 
 <body>
@@ -43,7 +41,6 @@
   </nav>
 
   <header class="app-header">
-
     <div>
       <img class="image_border" src="/images/profile-hex.png">
       <br>
@@ -53,8 +50,7 @@
       <!-- <h2><strong>Ladan</strong> Karimi</h2> -->
       <h1><strong>Ladan</strong> Karimi</h1>
     </div>
-
-  </header>
+  </header> 
 
   <!-- Page-specific (main) content here -->
   <main>
@@ -69,44 +65,18 @@
           <span class="counter" id="char_counter">140</span>
         </form>
       </section>
+    </div>
       
     <div class="articleContainer">
-      <!-- Write a new Tweet -->
-      <!-- test diff-->
-      <article class="tweet" id="article-tweet">
-        <header class="tweet-header">
-          <h2>
-            <img id="tweet_image" src="./images/avator_header.png">
-            Elmer Lazzeri
-          </h2>
-          <h4>@ladan</h4>
-        </header>
-        <div>
-          <p>akshdka</p>
-        </div>
-        <footer>
-          <p class="timestamp">days ago</p>
-          <p class="icons">
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-          </p>
-        </footer>
-      </article>
     </div>
 
 
-    <span class="right-side"><strong></strong> Compose Tweet<span id="arrowicon" >⇧</span></span>
   </nav>
 
   </main>
 
-
-
   <script src="./scripts/client.js"></script>
   <script src="./scripts/toggle_button.js"></script>
 
-  
 </body>
-
 </html>

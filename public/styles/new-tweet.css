@@ -1,14 +1,12 @@
-.textarea {  
+.text-new {
+    background-color: rgb(185, 185, 157);
     width: 100%;
-    border-bottom-width: 3px;
-    border-right-width: 0px;
-    border-left-width: 0px;
-    border-top-width: 0px;
+    border-width: 0 0 1px;
     outline:0px none transparent;
     background-color: transparent;
     outline: none;
 }
-
+    
 form > input {
     display:block;
     width: 100px;   

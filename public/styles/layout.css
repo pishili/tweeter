@@ -6,9 +6,6 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
-}
 
 /*
  * Global layout stuff
@@ -16,7 +13,7 @@ html {
 
 body {
   color: #424230;
-  background-color: rgb(246, 241, 248);
+  /* background-color: rgb(195, 199, 198); */
   font-size: 24px;
   font-family: 'Source Sans Pro';
 }
@@ -26,9 +23,27 @@ body {
  */
 
  main {
-   width: 80%;
    height: 100%;
    margin: auto;
-   /* margin-left: 10%;
-   margin-right: 10%; */
  }
+
+
+/* Mobile */
+@media only screen and (max-width: 960px) {
+  main {
+    /* width: 80%; */
+    width: 80%;
+  }
+}
+
+
+/* Desktop */
+@media only screen and (min-width: 960px) {
+  main {
+    /* width: 80%; */
+    width: 50%;
+    float: right;
+    margin-right: 5%;
+  }
+}
+

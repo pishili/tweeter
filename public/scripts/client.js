@@ -31,25 +31,22 @@ $(() => {
 
 
 const createTweetElement = ((tweet) => {
-
     return `
 
     <article class="tweet" id="article-tweet">
     <header class="tweet-header">
-      <h2>
-      <img id="tweet_image" src="./images/avator_header.png">
-          ${tweet.user.name}
-      </h2>
-
-        <h4>${tweet.user.handle}</h4>    
+      <img class="tweet-avator" src="${tweet.user.avatars}">
+      <span class='tweet-user-name'>${tweet.user.name}</span>
+      <span class='tweet-handle'> ${tweet.user.handle}</span>
     </header>
+    <br></br>
 
   <div>
-    <p>${escape(tweet.content.text)}</p>
+    <p>${tweet.content.text}</p>
   </div>
 
     <footer>
-      <p class="timestamp">${tweet.user.created_at}</p>
+      <p class="timestamp">${tweet.created_at}</p>
       <p class="icons">
         <i class="fas fa-flag"></i>
         <i class="fas fa-retweet"></i>
@@ -59,54 +56,6 @@ const createTweetElement = ((tweet) => {
   </article>
     `;
 });
-
-// const createTweetElementWithAutoFun = ((tweet) => {
-
-//     var articleElement = $('<article>')
-//                           .attr("id", "article-tweet")
-//                           .addClass("tweet");
-
-//     var headerElement =  $(<header></header>);
-//     headerElement.addClass("tweet-header");
-
-//     var h2Element = $(<h2></h2>);
-//     // append headerElement to articleElement
-//     articleElement.add(headerElement);
-
-//     var imageElement = $(<img></img>);
-//     imageElement.attr("id", "tweet_image").text(tweet.user.name);
-
-//     h2Element.add(imageElement);
-
-//     var h4Element = $(<h4></h4>);
-//     h4Element.text(tweet.user.handle);
-
-//     headerElement.add(h2Element);
-//     headerElement.add(h4Element);
-
-//     var divElement = $(<div></div>);
-//     divElement.text(tweet.content.text);
-
-//     var footerElement = $(<footer></footer>);
-
-//     var timestampParagraphElement = $(<p></p>);
-//     timestampParagraphElement.addClass("timestamp").text(tweet.user.created_at);
-
-//     var iconsParagraphElement = $(<p></p>);
-//     iconsParagraphElement.addClass("icons");
-
-//     var firstIconElement = $(<i></i>);
-//     firstIconElement.addClass("fas fa-flag");
-//     var secondIconElement = $(<i></i>);
-//     secondIconElement.addClass("fas fa-retweet");
-//     var thirdIconElement = $(<i></i>);
-//     thirdIconElement.addClass("fas fa-heart");
-
-
-//     footerElement.add(timestampParagraphElement);
-//     footerElement.add(iconsParagraphElement);
-
-// });
 
 $(() => {
     const $form = $('#tweet-post-form');
