@@ -3,12 +3,13 @@
     border: 5px solid rgba(0, 0, 0, 0.6);  
     border-radius: 10px;
     /* layout */
-    padding: 10px;
+    padding: 30px;
     margin-top: 50px;
     /* margin-bottom: 50px; */
 }
 
 .tweet .tweet-avator{
+    float: left;
     display: inline-block;
     margin-left: auto;
     margin: auto;
@@ -58,7 +59,7 @@ article > header.tweet-header > h2 {
 }
 
 article.tweet footer {
-    justify-content: space-between;s
+    justify-content: space-between;
     align-items: center;
     overflow: auto;
     border-top: 2px solid black;

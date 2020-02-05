@@ -1,8 +1,8 @@
 .app-header {
     height: 330px;
     position: relative;
-    /* background-color: rgb(194, 34, 167); */
-    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
     background-image: url('../images/45-degree-fabric-light.png');
 }
 

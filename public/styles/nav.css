@@ -47,7 +47,6 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  float: left;
 }
 
 .slider {
@@ -96,8 +95,6 @@ img {
     color: white;
     width: 34%;
   }
-
-
 }
 
 
