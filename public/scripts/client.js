@@ -102,6 +102,8 @@ $(() => {
 
 
 const renderTweets = (tweets) => {
+    // clear the previous tweets
+    $(".articleContainer").empty();
     tweets.forEach(tweet => {
         const tweetMarkup = createTweetElement(tweet);
         console.log("called");
@@ -115,7 +117,6 @@ const loadTweets = () => {
 
     return $.ajax('http://localhost:8080/tweets', { method: 'GET' })
         .then((data) => {
-            console.log(data);
             renderTweets(data);
         });
 }
