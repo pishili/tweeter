@@ -112,10 +112,10 @@ const renderTweets = (tweets) => {
 }
 
 
-// fetching tweets from the http://localhost:8080/tweets page
+// fetching tweets from the /tweets page
 const loadTweets = () => {
 
-    return $.ajax('http://localhost:8080/tweets', { method: 'GET' })
+    return $.ajax('/tweets', { method: 'GET' })
         .then((data) => {
             renderTweets(data);
         });
